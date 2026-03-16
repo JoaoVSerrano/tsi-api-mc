@@ -2,7 +2,7 @@
 GET {{url}}
 
 ###
-GET {{url}}/20
+GET {{url}}/2
 
 ###
 POST {{url}}

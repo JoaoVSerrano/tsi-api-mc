@@ -1,0 +1,34 @@
+@url = http://localhost:3000/filmes
+GET {{url}}
+
+###
+
+GET {{url}}/2
+
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+    "titulo" : "Teste"
+}
+
+###
+PUT {{url}}/2
+Content-Type: application/json
+
+{
+    "titulo": "Jurassic Park",
+    "assistido": true
+}
+
+###
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+    "assistido" : true
+}
+
+###
+DELETE {{url}}/2

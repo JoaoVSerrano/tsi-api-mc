@@ -24,10 +24,14 @@ router.get("/:id", (req: Request, res: Response) => {
 
 router.post("/", (req: Request, res: Response) => {
     const {titulo} = req.body;
+    const {diretor} = req.body;
+    const {ano} = req.body;
 
     const novoFilme: Filme = {
         id: filmes.length + 1,
         titulo: titulo,
+        diretor: diretor,
+        ano: ano,
         assistido: false
     }
 
@@ -40,7 +44,7 @@ router.put("/:id", (req: Request, res: Response) => {
 
     const filme = filmes.find(t => t.id == id);
 
-    if(!filmes) {
+    if(!filme) {
         return res.status(404).json({erro : "Filme não encontrado"});
     }
 
